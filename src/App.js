@@ -2,34 +2,63 @@ import React, {Component} from 'react'
 // import './App.css';
 // import PropStyle from './component/PropStyle';
 // import Data from './Data';
-
+import ConditionalRender from './component/ConditionalRender';
 
 class App extends Component {
-	constructor(){
+	constructor() {
 		super()
 		this.state = {
-			count: 0
+			isLoading: true
 		}
-		this.handleClick = this.handleClick.bind(this)
 	}
 
-	handleClick() {
-		this.setState(prevstate => {
-			return{
-				count: prevstate.count+1	
-			}
-		})
+	componentDidMount(){
+		setTimeout( () => {
+			this.setState({
+				isLoading: false
+			})
+		}, 4500)
 	}
-
+	
 	render() {
 		return(
-			<div style={{padding:"20px"}}>
-				<h1>{this.state.count} </h1>
-				<button onClick={this.handleClick}> Change </button>
-			</div>	
-		)	
+			<ConditionalRender isLoading={this.state.isLoading} />		
+		)
 	}
 }
+
+
+
+// Use of State
+
+// class App extends Component {
+// 	constructor(){
+// 		super()
+// 		this.state = {
+// 			count: 0
+// 		}
+// 		this.handleClick = this.handleClick.bind(this)
+// 	}
+
+// 	handleClick() {
+// 		this.setState(prevstate => {
+// 			return{
+// 				count: prevstate.count+1	
+// 			}
+// 		})
+// 	}
+
+// 	render() {
+// 		return(
+// 			<div style={{padding:"20px"}}>
+// 				<h1>{this.state.count} </h1>
+// 				<button onClick={this.handleClick}> Change </button>
+// 			</div>	
+// 		)	
+// 	}
+// }
+
+
 
 	// const hello = Data.map(i => <PropStyle key={i.id} Question={i.ques} Answer={i.ans} />)	
 
