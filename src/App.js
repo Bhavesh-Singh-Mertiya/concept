@@ -2,30 +2,45 @@ import React, {Component} from 'react'
 // import './App.css';
 // import PropStyle from './component/PropStyle';
 // import Data from './Data';
-import ConditionalRender from './component/ConditionalRender';
+// import ConditionalRender from './component/ConditionalRender';
+import FetchingData from './component/FetchingData'
 
+
+//fetching data from api
 class App extends Component {
-	constructor() {
-		super()
-		this.state = {
-			isLoading: true
-		}
-	}
-
-	componentDidMount(){
-		setTimeout( () => {
-			this.setState({
-				isLoading: false
-			})
-		}, 4500)
-	}
-	
 	render() {
 		return(
-			<ConditionalRender isLoading={this.state.isLoading} />		
+			<div>
+				<FetchingData />	
+			</div>
 		)
 	}
 }
+
+
+
+// class App extends Component {
+// 	constructor() {
+// 		super()
+// 		this.state = {
+// 			isLoading: true
+// 		}
+// 	}
+
+// 	componentDidMount(){
+// 		setTimeout( () => {
+// 			this.setState({
+// 				isLoading: false
+// 			})
+// 		}, 4500)
+// 	}
+	
+// 	render() {
+// 		return(
+// 			<ConditionalRender isLoading={this.state.isLoading} />		
+// 		)
+// 	}
+// }
 
 
 
