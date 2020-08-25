@@ -12,7 +12,6 @@ class FetchingData extends React.Component {
 
 		
 	componentDidMount() {
-		// fetch("https://jsonplaceholder.typicode.com/todos")
 		fetch("http://time.jsontest.com")	
 		.then(response => response.json())
 		.then(data => {

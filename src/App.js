@@ -3,19 +3,32 @@ import React, {Component} from 'react'
 // import PropStyle from './component/PropStyle';
 // import Data from './Data';
 // import ConditionalRender from './component/ConditionalRender';
-import FetchingData from './component/FetchingData'
+// import FetchingData from './component/FetchingData'
+import Form2 from './component/Form2'
 
 
-//fetching data from api
 class App extends Component {
 	render() {
 		return(
 			<div>
-				<FetchingData />	
+				<Form2 />	
 			</div>
 		)
 	}
 }
+
+
+
+ //fetching data from api
+// class App extends Component {
+// 	render() {
+// 		return(
+// 			<div>
+// 				<FetchingData />	
+// 			</div>
+// 		)
+// 	}
+// }
 
 
 
