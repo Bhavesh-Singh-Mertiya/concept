@@ -4,14 +4,14 @@ import React, {Component} from 'react'
 // import Data from './Data';
 // import ConditionalRender from './component/ConditionalRender';
 // import FetchingData from './component/FetchingData'
-import Form2 from './component/Form2'
-
+// import Form2 from './component/Form2'
+import Form3 from './component/Form3'
 
 class App extends Component {
 	render() {
 		return(
 			<div>
-				<Form2 />	
+				<Form3 />	
 			</div>
 		)
 	}
